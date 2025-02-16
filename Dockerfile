@@ -8,7 +8,7 @@ COPY Cargo.toml Cargo.lock ./
 COPY src src
 RUN cargo install --path .
 
-FROM alpine:3.21.0
+FROM alpine:3.21.3
 LABEL author="Hydragyrum <https://github.com/Hydragyrum>"
 RUN addgroup -S rustscan && \
     adduser -S -G rustscan rustscan && \
